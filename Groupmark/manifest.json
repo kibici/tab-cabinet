@@ -1,0 +1,27 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Tab Cabinate",
+  "version": "1.0.1",
+
+  // Recommended
+  "description": "Conveniently save multiple tabs in a single group.",
+  //Need to eliminate tabs you might need later but don't want to waste time bookmarking each one? Groupmark lets you quickly archive the tabs you don't want to lose and clear out your browser.
+
+  "icons": {
+      "16" : "icon16.jpg",
+      "48" : "icon48.jpg",
+      "128" : "icon128.jpg"
+  },
+
+  "browser_action": {
+      "default_title": "Tab Cabinate",
+      "default_icon": "icon16.jpg",
+      "default_popup": "popup.html"
+  },
+
+  // Optional
+  "author": "Kaan Ibici",
+  
+  "permissions": ["tabs","storage","bookmarks"]
+}

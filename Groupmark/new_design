@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Test</title>
+<style> 
+body {
+    height: 570px;
+    width: 270px;
+    background-color: #EBEBEB;
+    padding: 0px;
+    margin: 0px;
+}
+
+br {
+   display: block;
+   margin: 10px 0;
+   content:" ";
+}
+br.big {
+    margin: 15px 0;
+}
+
+div {
+    box-shadow: 0px 1px 5px #A2A2A2;
+}
+div.header {
+    background-color: #40B0A6;
+    height: 70px;
+    width: 270px;
+}
+div.tablist {
+    background-color: white;
+    height: 300px;
+    width: 250px;
+    position: absolute;
+    left: 10px;
+    top: 120px;
+}
+
+button {
+    box-shadow: 0px 1px 4px #A2A2A2;
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    text-align: center;
+    border: none;
+    position: absolute;
+}
+button.checkops {
+    height: 25px;
+    width: 120px;
+    background-color: white;
+    top: 85px;
+}
+</style>
+<script></script>
+</head>
+<body>
+<div class = 'header'></div>
+
+
+
+<button class = 'checkops' style = 'left: 10px;'></button>
+<button class = 'checkops' style = 'left: 140px;'></button>
+
+
+<div class = 'tablist'></div>
+
+
+</body>
+</html>

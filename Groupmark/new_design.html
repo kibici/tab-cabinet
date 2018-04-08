@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+<title>Test</title>
+<style> 
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 558px;
+    width: 250px;
+    background-color:  #efefef;
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    z-index: 0;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+div {
+    box-shadow: 0px 1px 5px #A2A2A2;
+}
+div.header {
+    background-color: #06A2CB;
+    height: 70px;
+    width: 250px;
+}
+div.footer {
+    background-color: #06A2CB;
+    height: 135px;
+    width: 250px;
+    position: absolute;
+}
+div.tablist {
+    background-color: #efefef;
+    height: 302px;
+    width: 230px;
+    position: absolute;
+    left: 10px;
+    top: 120px;
+    overflow-y: scroll;
+}
+div.headtxt {
+    height: 69px;
+    width: 70px;
+    position: absolute;
+    top: 0px;
+    border: none;
+    background-color: #06A2CB;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: none;
+    color: #a5ddec;
+}
+div.headtxt:hover {
+    border-bottom: 1px solid white;
+    color: white;
+    cursor: default;
+}
+div.headtxt p {
+    margin:0px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+div.holder {
+    padding-top: 10px; 
+    padding-bottom: 10px;
+    height: 20px;
+    background-color: white;
+    z-index: 12;
+}
+div.holder:hover {
+    cursor: default;
+    background-color: #efefef;
+}
+div.holder span {
+    position: absolute;
+    font-size: 12px;
+    left: 50px;
+    margin-top: 2px;
+}
+
+div.holder img {
+    position: absolute;
+    left: 27px;
+}
+div.holder input {
+    position: absolute;
+    left: 4px;
+}
+div.holder button {
+    vertical-align: center;
+    background-color: transparent;
+}
+
+div.inputbkg {
+    height: 43px;
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    top: 435px;
+    border: none;
+    background-color: #06A2CB;
+    padding: 0px;
+    margin: 0px;
+    box-shadow: none;
+}
+div.inputbkg:hover {
+    background-color: #138DAB;
+}
+div.inputbkg:focus {
+    background-color: #138DAB;
+}
+
+button {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    border: none;
+    padding: none;
+    position: absolute;
+}
+button:focus{
+    outline: none;
+}
+
+button.checkops {
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5px;
+    height: 25px;
+    width: 110px;
+    background-color: #efefef;
+    top: 85px;
+    box-shadow: none;
+    border: 1px solid #C2C2C2;
+    font-size: 10px;
+}
+button.checkops:hover {
+    background-color: #E3E3E3;
+}
+
+button.save {
+    height: 37px;
+    width: 250px;
+    background-color: #06A2CB;
+    color: white;
+    left: 0px;
+    box-shadow: none;
+    font-size: 14px;
+}
+button.save:hover {
+    background-color: #138DAB;
+}
+input[type=text], select {
+    font-family: 'Open Sans', sans-serif;
+    width : 230px;
+    height: 30px;
+    padding: 10px 10px;
+    border: 1px solid #89d2e6;
+    background-color: #06A2CB;
+    color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 10px;
+    z-index:2;
+}
+::-webkit-input-placeholder {
+    color: #a5ddec;
+}
+input[type=text]:focus {
+    outline: none;
+    border: 1px solid #FFFFFF
+}
+input[type=text]:focus + #inbkg{
+}
+input[type=text]:hover + #inbkg{
+    background-color: #138DAB;
+}
+</style>
+<script src="popupNEW2.js"></script>
+</head>
+<body>
+<div class = 'header'></div>
+<div class = 'headtxt' style = 'left:10px;' ><p>Manage<br>Tabs<p></div>
+<div class = 'headtxt' style = 'left:90px;'><p>New<br>Group<p></div>
+<div class = 'headtxt' style = 'left:170px;'><p>Saved<br>Groups<p></div>
+
+
+<button class = 'checkops' id = 'uncheckAll' style = 'left: 10px;' tabindex="-1">Check All</button>
+<button class = 'checkops' id = 'checkAll' style = 'left: 130px;' tabindex="-1">Uncheck All</button>
+
+
+<div class = 'tablist' id = 'tablist'>
+    <form id = "tabs" style = "min-height: 300px"></form>
+</div>
+
+<div class = 'footer' style = 'top: 435px;'></div>
+
+<input type="text" id="groupname" name="group" placeholder="Group Name.." style = 'top:442px;' tabindex="1">
+<div class = 'inputbkg' id = 'inbkg'></div>  
+
+
+
+<button class = 'save' id = 'saveState' style = 'top: 478px;' tabindex="-1">Save Group</button>
+<button class = 'save' id = 'saveClearSel' style = 'top: 515px;' tabindex="-1">Save & Clear Selected Tabs</button>
+
+
+
+</body>
+</html>
